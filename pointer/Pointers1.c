@@ -106,34 +106,41 @@
 // o/p: compilation error (can not change address to constant pointer)
 
 // //10) 
-#include <stdio.h>
-int main()
-{
- const int ary[4] = {1, 2, 3, 4};
- int *p;
- p = ary + 3;
- *p = 5;
- printf("%d\n", ary[3]);
-}
-// o/p: compilation error (can not change the value of constant variable)
+// #include <stdio.h>
+// int main()
+// {
+//  const int ary[4] = {1, 2, 3, 4};
+//  int *p;
+//  p = ary + 3;
+//  *p = 5;
+//  printf("%d\n", ary[3]);
+// }
+// o/p : 5 (ary type will chage from const int * to int *)
 
 
-//   11) #include <stdio.h>
-//         int main()
-//         {
-//             int
-//             int
-//  ary[4] = {1, 2, 3, 4};
-//  *p = ary + 3;
-//             printf("%d\n", p[-2]);
-//     }
-//  12)  #include <stdio.h>
-//         void main()
-//         {
-//             char *s= "hello";
-//             char *p = s + 2;
-//             printf("%c\t%c", *p, s[1]);
-//         }
+// //11) 
+// #include <stdio.h>
+// int main()
+// {
+//  int ary[4] = {1, 2, 3, 4};
+//  int *p = ary + 3;
+//  printf("%d\n", p[-2]); 
+// }
+// o/p : 2
+
+
+
+//  //12) 
+// #include <stdio.h>
+// void main()
+// {
+//  char *s= "hello";
+//  char *p = s + 2;
+//  printf("%c\t%c", *p, s[1]);
+// }
+// o/p: l   e
+
+
 //  13) #include <stdio.h>
 //         int main()
 //         {
@@ -147,6 +154,9 @@ int main()
 //  n = (int*)p - ptr;
 //             printf("%d\n", n);
 //         }
+
+
+
 // 14) #include<stdio.h>
 //       int main()
 //       {
